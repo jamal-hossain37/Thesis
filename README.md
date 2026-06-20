@@ -5,7 +5,7 @@
 **Institution:** Dept. of Computer Science and Engineering, University of Rajshahi, Bangladesh
 
 
-This repository documents the full lifecycle of my undergraduate thesis — from pre-defense exploration through final defense — culminating in a peer-reviewed paper accepted at the **29th International Conference on Computer and Information Technology(ICCIT)**, December 18-20, 2026  Cox’s Bazar, Bangladesh.
+This repository documents the full lifecycle of my undergraduate thesis — from pre-defense exploration through final defense — culminating in a peer-reviewed paper under review at the **29th International Conference on Computer and Information Technology(ICCIT)**, December 18-20, 2026  Cox’s Bazar, Bangladesh.
 
 > 📄 **Paper:** *An Interactive 3D Decision Space Visualization Framework for Misclassification Analysis in Machine Learning Driven Network Intrusion Detection Systems*
 > **Authors:** Jamal Hossain, Mazharul Islam, Krishna Debnath
