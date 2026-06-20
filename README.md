@@ -177,17 +177,6 @@ The convergence to 99.823% across multiple models — and AdaBoost's ~4-point ju
 
 ---
 
-## Citation
-
-```bibtex
-@inproceedings{hossain2026interactive,
-  title={An Interactive 3D Decision Space Visualization Framework for Misclassification Analysis in Machine Learning Driven Network Intrusion Detection Systems},
-  author={Hossain, Jamal and Islam, Mazharul and Debnath, Krishna},
-  booktitle={2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN)},
-  year={2026},
-  address={Chittagong, Bangladesh}
-}
-```
 
 ---
 
