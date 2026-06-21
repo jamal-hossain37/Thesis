@@ -1,0 +1,30 @@
+
+NETWORK INTRUSION DATASET ANALYSIS SUMMARY
+==========================================
+
+Dataset Overview:
+- Total Records: 82332
+- Total Features: 45
+- No Missing Values: True
+- Duplicate Rows: 0
+
+Target Variable Distribution:
+{1: 45332, 0: 37000}
+
+Top 5 Features Correlated with Labels:
+{'id': -0.387488649742822, 'dur': -0.0011452513082882902, 'spkts': -0.027730785071289878, 'dpkts': -0.06151507696956742, 'sbytes': 0.020641082006484526}
+
+Feature Importance (Top 5 by Mutual Information):
+{'Feature': {43: 'attack_cat', 0: 'id', 7: 'sbytes', 27: 'smean', 12: 'sload'}, 'MI Score': {43: 0.6880176819912047, 0: 0.6879435917599265, 7: 0.46072450473591564, 27: 0.3583943432276733, 12: 0.34491903245114286}}
+
+Dimensionality Reduction:
+- Components for 95% variance: 24
+
+Outliers Detected:
+- Features with >5% outliers: 26
+
+Preprocessing Recommendations:
+1. Scaling: Recommended (StandardScaler/MinMaxScaler)
+2. Feature Selection: Start with top 29 features
+3. Handle multicollinearity if needed
+4. Consider ensemble methods for robustness
