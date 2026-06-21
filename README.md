@@ -12,45 +12,12 @@ This repository documents the full lifecycle of my undergraduate thesis — from
 
 ---
 
-### Abstract 
+### Abstract
 
-*Machine learning* has improved the performance
-of Network Intrusion Detection Systems in cybersecurity, but
-many models still provide limited insight into their classification
-errors. Standard evaluation measures such as accuracy, precision,
-recall, F1 score, and confusion matrices summarize performance,
-but they do not show where misclassified samples lie in the
-feature space or how decision boundaries behave around rare
-attack classes. Although SHAP and LIME can explain feature
-contributions, they do not directly visualize the geometric position
-of misclassified samples within classifier decision regions. To
-overcome this limitation, this study proposes an interactive
-three dimensional framework that visualizes decision spaces and
-supports misclassification analysis in machine learning driven
-Network Intrusion Detection Systems. The framework applies
-PCA for variance based reduction and LDA for class discrim
-ination, then renders the projected decision spaces as WebGL
-enabled three dimensional scenes. A voxel based representation
-with 1503 grid cells is used to examine geometric patterns behind
-classification errors. Eight base classifiers and five ensemble
-configurations are evaluated on UNSW NB15, NSL KDD, and
-an additional diagnostic NSL KDD Merge setting using five
-fold stratified cross validation. The 100 percent accuracy on
-UNSW NB15 is analyzed through the projected decision space,
-where training and testing samples form highly similar and well
-separated clusters, indicating geometric class separability rather
-than data leakage or overfitting. On NSL KDD, low R2L recall
-is linked to weak class separability and train test distribution
-shift. In the NSL KDD Merge setting, Random Forest, Weighted
-Hard Voting, and Stacking achieve 99.823% accuracy. Overall,
-the framework connects statistical evaluation with visual decision
-space evidence to help cybersecurity analysts understand where
-and why machine learning based intrusion detection models fail.
-Index Terms—Cybersecurity, Network Intrusion Detection, 3D
-Decision Space Visualization, Decision Boundary, Misclassifica
-tion Analysis, Ensemble Learning, PCA, LDA, UNSW-NB15,
-NSL-KDD
----
+Machine learning has improved the performance of Network Intrusion Detection Systems in cybersecurity, but many models still provide limited insight into their classification errors. Standard evaluation measures such as accuracy, precision, recall, F1 score, and confusion matrices summarize performance, but they do not show where misclassified samples lie in the feature space or how decision boundaries behave around rare attack classes.Although SHAP and LIME can explain feature contributions, they do not directly visualize the geometric position of misclassified samples within classifier decision regions. To overcome this limitation, this study proposes an interactive three dimensional framework that visualizes decision spaces and supports misclassification analysis in machine learning driven Network Intrusion Detection Systems.
+The framework applies PCA for variance based reduction and LDA for class discrimination, then renders the projected decision spaces as WebGL enabled three dimensional scenes. A voxel based representation with 1503 grid cells is used to examine geometric patterns behind classification errors.Eight base classifiers and five ensemble configurations are evaluated on UNSW NB15, NSL KDD, and an additional diagnostic NSL KDD Merge setting using five fold stratified cross validation. The 100 percent accuracy on UNSW NB15 is analyzed through the projected decision space, where training and testing samples form highly similar and well separated clusters, indicating geometric class separability rather than data leakage or overfitting. On NSL KDD, low R2L recall is linked to weak class separability and train test distribution shift. In the NSL KDD Merge setting, Random Forest, Weighted Hard Voting, and Stacking achieve 99.823 percent accuracy. Overall, the framework connects statistical evaluation with visual decision space evidence to help cybersecurity analysts understand where and why machine learning based intrusion detection models fail.
+
+**Index Terms:** Cybersecurity, Network Intrusion Detection, 3D Decision Space Visualization, Decision Boundary, Misclassification Analysis, Ensemble Learning, PCA, LDA, UNSW NB15, NSL KDD
 
 ## Pipeline
 
