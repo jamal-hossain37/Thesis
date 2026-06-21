@@ -54,7 +54,7 @@ NSL-KDD
 
 ## Pipeline
 
-<img src="figures/pipeline.png" width="500">
+<img src="Figures/pipeline.png" width="500">
 
 **Stages:**
 1. **Preprocessing** — missing-value imputation, one-hot encoding, min-max normalization, zero-mean centering. All fit on the training partition only, to prevent leakage.
@@ -83,55 +83,55 @@ SMOTE and SMOTE+Tomek oversampling applied during training to address class imba
 
 ### UNSW-NB15: Train vs. Test Cluster Geometry
 
-<img src="figures/un_5.1.png" width="500">
+<img src="Figures/un_5.1.png" width="500">
 
 Training and test splits, viewed from two camera angles, occupy nearly identical 3D regions — the geometric explanation for why several classifiers reach **100% accuracy** on this dataset. The result reflects genuine class separability, not overfitting or data leakage.
 
 ### UNSW-NB15: Per-Class Cluster Examples
 
-<img src="figures/un_5.2.png" width="500">
+<img src="Figures/un_5.2.png" width="500">
 
 Normal traffic clusters tightly and consistently across train/test (explaining high Normal precision). Generic attacks form an even tighter, isolated cluster (explaining high recall). Mixed-traffic regions shared by multiple classes are the direct geometric source of cross-class confusion.
 
 ### UNSW-NB15: Misclassification Close-Up
 
-<img src="figures/un_5.5.png" width="500">
+<img src="Figures/un_5.5.png" width="500">
 
 A zoomed view of the Normal/Abnormal boundary. 1,010 Abnormal instances are geometrically co-located with Normal traffic in the first three principal components — visually confirming why they're misclassified, and showing that no amount of threshold tuning alone would fix it without new features.
 
 ### UNSW-NB15: Per-Model Decision Spaces
 
-<img src="figures/un_model.png" width="500">
+<img src="Figures/un_model.png" width="500">
 
 Random Forest and KNN produce sharply bounded decision regions (consistent with their near-100% accuracy). AdaBoost and CatBoost produce broader, less confident surfaces. Bagging shows the most diffuse boundaries of any base classifier — directly visible, not just inferable from a metrics table.
 
 ### UNSW-NB15: Ensemble Decision Spaces
 
-<img src="figures/en_un.png" width="500">
+<img src="Figures/en_un.png" width="500">
 
 The Voting Classifier consolidates heterogeneous base learners into broad, unified boundaries. Stacking produces visibly tighter per-class surfaces, reflecting the meta-learner's exploitation of complementary base-model strengths.
 
 ### NSL-KDD: Train vs. Test Distribution Shift
 
-<img src="figures/ns_5.1.png" width="500">
+<img src="Figures/ns_5.1.png" width="500">
 
 Unlike UNSW-NB15, NSL-KDD's train and test splits diverge visibly — especially in the R2L/Normal region. This is the direct geometric cause of the **5.6% R2L recall**: a distribution shift the model never saw during training.
 
 ### NSL-KDD: Per-Class Cluster Examples
 
-<img src="figures/ns_5.3.png" width="500">
+<img src="Figures/ns_5.3.png" width="500">
 
 DoS traffic is isolated and homogeneous (high recall). The critical finding is in the R2L panels: in training, that cluster region is mostly Normal traffic; in test, R2L samples densely co-locate in the *same* region — so the classifier defaults to the dominant Normal label. This shift is invisible in summary statistics but immediately obvious in 3D.
 
 ### NSL-KDD: Multi-Category Decision Spaces
 
-<img src="figures/ns_5.5.png" width="500">
+<img src="Figures/ns_5.5.png" width="500">
 
 DoS occupies a well-defined, isolated region (91.9% recall). Normal occupies the largest volumetric region. R2L's decision space is sparse and fragmented — visual confirmation that the classifier cannot maintain a coherent boundary given the underlying distribution shift.
 
 ### NSL-KDD: Ensemble Decision Spaces
 
-<img src="figures/en_ns.png" width="500">
+<img src="Figures/en_ns.png" width="500">
 
 The Voting Classifier produces smooth, broad boundaries that reduce false positives at the Normal/DoS border. Stacking produces tighter per-class surfaces with measurably improved Probe and R2L coverage.
 
