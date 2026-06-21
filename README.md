@@ -12,9 +12,9 @@ This repository documents the full lifecycle of my undergraduate thesis — from
 
 ---
 
-## Abstract 
+### Abstract 
 
-Machine learning has improved the performance
+*Machine learning* has improved the performance
 of Network Intrusion Detection Systems in cybersecurity, but
 many models still provide limited insight into their classification
 errors. Standard evaluation measures such as accuracy, precision,
